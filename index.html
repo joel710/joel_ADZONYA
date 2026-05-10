@@ -120,7 +120,7 @@
               <span data-i18n="hero_lets_talk">Get in Touch</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a href="CV_joel.pdf" download="Joel_Adzonya_CV.md" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
+            <a id="cvDownloadLink" href="CV/CV_joel_ADZONYA_fr.pdf" download="CV_joel_ADZONYA.pdf" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
               <i data-lucide="download" class="w-4 h-4"></i>
               <span data-i18n="hero_download_cv">Télécharger mon CV</span>
             </a>
@@ -830,6 +830,12 @@
       document.getElementById('currentLang').textContent = currentLang.toUpperCase();
       document.getElementById('currentLangMobile').textContent = currentLang.toUpperCase();
       document.documentElement.lang = currentLang;
+
+      // Update CV link
+      const cvLink = document.getElementById('cvDownloadLink');
+      if (cvLink) {
+        cvLink.href = currentLang === 'fr' ? 'CV/CV_joel_ADZONYA_fr.pdf' : 'CV/CV_joel_ADZONYA_en.pdf';
+      }
     }
 
     const toggleLang = () => {
