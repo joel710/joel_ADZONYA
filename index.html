@@ -1,4 +1,6 @@
-<html lang="fr" class="scroll-smooth"><head>
+<html lang="fr" class="scroll-smooth">
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joel ADZONYA — Full-Stack Developer & AI Engineer</title>
@@ -6,20 +8,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" cADZONYAorigin="">
   <!-- Inter (sans), Fraunces (serif display) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     :root {
       --radius: 16px;
     }
-    html, body { height: 100%; }
-    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: #0b0b0f; background: #ffffff; }
-    .serif { font-family: 'Fraunces', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: #0b0b0f;
+      background: #ffffff;
+    }
+
+    .serif {
+      font-family: 'Fraunces', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
   </style>
 </head>
+
 <body class="antialiased text-neutral-900 selection:bg-lime-300/60 selection:text-neutral-900">
   <!-- Top gradient aura -->
-  <div class="pointer-events-none fixed inset-x-0 top-[-20vh] h-[60vh] z-0 [background:radial-gradient(110%_60%_at_50%_10%,rgba(163,230,53,0.55),rgba(163,230,53,0.25)_35%,rgba(163,230,53,0.06)_60%,transparent_70%)]"></div>
+  <div
+    class="pointer-events-none fixed inset-x-0 top-[-20vh] h-[60vh] z-0 [background:radial-gradient(110%_60%_at_50%_10%,rgba(163,230,53,0.55),rgba(163,230,53,0.25)_35%,rgba(163,230,53,0.06)_60%,transparent_70%)]">
+  </div>
 
   <!-- Nav -->
   <header class="relative z-10">
@@ -33,17 +53,20 @@
         <a href="#process" class="hover:text-neutral-900 transition" data-i18n="nav_process">Process</a>
         <a href="#contact" class="hover:text-neutral-900 transition" data-i18n="nav_contact">Contact</a>
         <div class="flex items-center gap-2 ml-4">
-          <button id="langToggle" class="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-medium text-neutral-900 shadow-sm hover:bg-neutral-50 transition">
+          <button id="langToggle"
+            class="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-medium text-neutral-900 shadow-sm hover:bg-neutral-50 transition">
             <i data-lucide="languages" class="w-3.5 h-3.5 text-lime-600"></i>
             <span id="currentLang">EN</span>
           </button>
-          <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-900 px-4 py-2 text-white shadow-sm hover:opacity-90 transition">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-900 px-4 py-2 text-white shadow-sm hover:opacity-90 transition">
             <i data-lucide="send" class="w-4 h-4"></i>
             <span data-i18n="nav_get_in_touch">Get in Touch</span>
           </a>
         </div>
       </nav>
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-200 bg-white/70 backdrop-blur text-neutral-900 shadow-sm">
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-neutral-200 bg-white/70 backdrop-blur text-neutral-900 shadow-sm">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
     </div>
@@ -53,7 +76,8 @@
       <div class="ml-auto h-full w-[85%] max-w-sm bg-white shadow-xl flex flex-col">
         <div class="p-5 flex items-center justify-between">
           <span class="serif italic text-[20px] tracking-tight">Joël Adzonya</span>
-          <button id="closeMenu" class="w-9 h-9 inline-flex items-center justify-center rounded-full border border-neutral-200">
+          <button id="closeMenu"
+            class="w-9 h-9 inline-flex items-center justify-center rounded-full border border-neutral-200">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
@@ -62,13 +86,15 @@
           <a href="#work" class="py-2 text-base" data-i18n="nav_portfolio">Portfolio</a>
           <a href="#process" class="py-2 text-base" data-i18n="nav_process">Process</a>
           <a href="#contact" class="py-2 text-base" data-i18n="nav_contact">Contact</a>
-          <button id="langToggleMobile" class="w-max inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-900 shadow-sm">
+          <button id="langToggleMobile"
+            class="w-max inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-900 shadow-sm">
             <i data-lucide="languages" class="w-4 h-4 text-lime-600"></i>
             <span id="currentLangMobile">EN</span>
           </button>
         </div>
         <div class="mt-auto p-6">
-          <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-neutral-900 text-white px-5 py-3 shadow hover:opacity-90 transition">
+          <a href="#contact"
+            class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-neutral-900 text-white px-5 py-3 shadow hover:opacity-90 transition">
             <i data-lucide="send" class="w-4 h-4"></i>
             <span data-i18n="nav_get_in_touch">Get in Touch</span>
           </a>
@@ -83,7 +109,8 @@
       <!-- Badge + award -->
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/70 backdrop-blur px-3 py-1 text-xs text-neutral-700 shadow-sm">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/70 backdrop-blur px-3 py-1 text-xs text-neutral-700 shadow-sm">
             <i data-lucide="award" class="w-4 h-4 text-lime-600"></i>
             <span data-i18n="hero_badge">Ingénieur IA Certifié AWS</span>
           </span>
@@ -95,17 +122,21 @@
           <h1 class="text-[44px] leading-[1.05] md:text-[64px] lg:text-[76px] tracking-tight text-neutral-900">
             <span data-i18n="hero_hi">Hi, I’m</span> <span class="font-semibold">Joel</span>
           </h1>
-          <p class="serif italic text-[48px] md:text-[72px] lg:text-[88px] tracking-tight -mt-2 text-neutral-900" data-i18n="hero_title">
-            AI Engineer &  
+          <p class="serif italic text-[48px] md:text-[72px] lg:text-[88px] tracking-tight -mt-2 text-neutral-900"
+            data-i18n="hero_title">
+            AI Engineer &
           </p>
-          <p class="serif italic text-[48px] md:text-[72px] lg:text-[88px] tracking-tight -mt-2 text-neutral-900" data-i18n="hero_subtitle">
+          <p class="serif italic text-[48px] md:text-[72px] lg:text-[88px] tracking-tight -mt-2 text-neutral-900"
+            data-i18n="hero_subtitle">
             Full-Stack Dev
           </p>
 
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-800 shadow-sm w-max">
+            <div
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-800 shadow-sm w-max">
               <span class="relative inline-flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-lime-500"></span>
               </span>
               <span data-i18n="hero_available">Available for new opportunities</span>
@@ -116,11 +147,13 @@
           </div>
 
           <div class="mt-8 flex items-center gap-3">
-            <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-white px-5 py-3 text-sm shadow hover:opacity-90 transition">
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-white px-5 py-3 text-sm shadow hover:opacity-90 transition">
               <span data-i18n="hero_lets_talk">Get in Touch</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a id="cvDownloadLink" href="CV/CV_joel_ADZONYA_fr.pdf" download="CV_joel_ADZONYA.pdf" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
+            <a id="cvDownloadLink" href="CV/CV_joel_ADZONYA_fr.pdf" download="CV_joel_ADZONYA.pdf"
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
               <i data-lucide="download" class="w-4 h-4"></i>
               <span data-i18n="hero_download_cv">Télécharger mon CV</span>
             </a>
@@ -139,7 +172,8 @@
           <div class="relative rounded-[28px] overflow-hidden border border-neutral-100 shadow-2xl bg-white">
             <img src="joel.png" alt="Portrait" class="w-full h-[580px] object-cover object-top -mt-10">
             <div class="absolute bottom-4 right-4">
-              <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm text-neutral-900 shadow">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm text-neutral-900 shadow">
                 <i data-lucide="message-circle" class="w-4 h-4 text-lime-600"></i>
                 <span data-i18n="hero_lets_talk">Let's talk</span>
               </a>
@@ -153,7 +187,8 @@
   <!-- Work Preview Strip -->
   <section class="relative">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="rounded-[24px] border border-lime-200 bg-white shadow-[0_10px_40px_-10px_rgba(163,230,53,0.35)] p-4 sm:p-6">
+      <div
+        class="rounded-[24px] border border-lime-200 bg-white shadow-[0_10px_40px_-10px_rgba(163,230,53,0.35)] p-4 sm:p-6">
         <div class="overflow-hidden">
           <div class="flex animate-marquee space-x-4">
             <div class="flex space-x-4">
@@ -208,22 +243,28 @@
       </p>
 
       <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm">
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="cpu" class="w-4 h-4 text-orange-500"></i> Intelligence Artificielle
         </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="code" class="w-4 h-4 text-sky-500"></i> Développement Full Stack
         </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="smartphone" class="w-4 h-4 text-emerald-500"></i> Applications Mobiles
         </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="trending-up" class="w-4 h-4 text-pink-500"></i> Machine Learning
         </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="zap" class="w-4 h-4 text-violet-500"></i> Deep Learning
         </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 shadow-sm">
           <i data-lucide="sprout" class="w-4 h-4 text-lime-600"></i> Solutions AgriTech
         </span>
       </div>
@@ -235,7 +276,8 @@
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="serif italic text-neutral-500" data-i18n="skills_title">Expertise Technique</p>
-        <h3 class="mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="skills_subtitle">Compétences & Technologies</h3>
+        <h3 class="mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="skills_subtitle">Compétences &
+          Technologies</h3>
         <p class="mt-4 text-neutral-600 max-w-2xl mx-auto" data-i18n="skills_desc">
           Un aperçu des technologies et outils que j'utilise pour créer des solutions innovantes.
         </p>
@@ -287,31 +329,40 @@
         <div>
           <h4 class="text-xl font-semibold mb-6" data-i18n="skills_frameworks">Technologies & Frameworks</h4>
           <div class="flex flex-wrap gap-3">
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="code" class="w-4 h-4 text-sky-500"></i> Flutter
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="code" class="w-4 h-4 text-sky-500"></i> React
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="code" class="w-4 h-4 text-sky-500"></i> Node.js
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="database" class="w-4 h-4 text-emerald-500"></i> Firebase
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="database" class="w-4 h-4 text-emerald-500"></i> Supabase
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="zap" class="w-4 h-4 text-orange-500"></i> FastAPI
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="cpu" class="w-4 h-4 text-violet-500"></i> TensorFlow
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="cpu" class="w-4 h-4 text-violet-500"></i> scikit-learn
             </span>
-            <span class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 shadow-sm">
               <i data-lucide="database" class="w-4 h-4 text-pink-500"></i> MySQL
             </span>
           </div>
@@ -352,48 +403,72 @@
 
   <!-- Process -->
   <section id="process" class="relative py-14">
-    <div class="absolute inset-x-0 -top-10 h-[50vh] pointer-events-none [background:radial-gradient(60%_50%_at_50%_0%,rgba(163,230,53,0.22),transparent_70%)]"></div>
+    <div
+      class="absolute inset-x-0 -top-10 h-[50vh] pointer-events-none [background:radial-gradient(60%_50%_at_50%_0%,rgba(163,230,53,0.22),transparent_70%)]">
+    </div>
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p class="serif italic text-neutral-500" data-i18n="process_title">My Approach</p>
-        <h3 class="mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="process_subtitle">Here’s how I work</h3>
+        <h3 class="mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="process_subtitle">Here’s how I
+          work</h3>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Card 01 -->
-        <div class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
-          <div class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">01</div>
+        <div
+          class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
+          <div
+            class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">
+            01</div>
           <h4 class="mt-6 text-xl tracking-tight font-semibold" data-i18n="process_step1_title">Research & Plan</h4>
           <p class="mt-2 text-neutral-600 text-sm" data-i18n="process_step1_desc">
             Understanding requirements, technologies, and defining the optimal architecture.
           </p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="book-open" class="w-3.5 h-3.5 text-neutral-700"></i> Analysis</span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="layout" class="w-3.5 h-3.5 text-neutral-700"></i> Architecture</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="book-open" class="w-3.5 h-3.5 text-neutral-700"></i> Analysis</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="layout" class="w-3.5 h-3.5 text-neutral-700"></i> Architecture</span>
           </div>
         </div>
         <!-- Card 02 -->
-        <div class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
-          <div class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">02</div>
+        <div
+          class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
+          <div
+            class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">
+            02</div>
           <h4 class="mt-6 text-xl tracking-tight font-semibold" data-i18n="process_step2_title">Develop & Integrate</h4>
           <p class="mt-2 text-neutral-600 text-sm" data-i18n="process_step2_desc">
             Building robust applications with AI/ML models and IoT connectivity.
           </p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="code" class="w-3.5 h-3.5 text-neutral-700"></i> Development</span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="git-branch" class="w-3.5 h-3.5 text-neutral-700"></i> Integration</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="code" class="w-3.5 h-3.5 text-neutral-700"></i> Development</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="git-branch" class="w-3.5 h-3.5 text-neutral-700"></i> Integration</span>
           </div>
         </div>
         <!-- Card 03 -->
-        <div class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
-          <div class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">03</div>
+        <div
+          class="relative rounded-3xl bg-white border border-neutral-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] p-6">
+          <div
+            class="absolute -top-6 left-6 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-lime-500 text-white shadow-lg">
+            03</div>
           <h4 class="mt-6 text-xl tracking-tight font-semibold" data-i18n="process_step3_title">Deploy & Optimize</h4>
           <p class="mt-2 text-neutral-600 text-sm" data-i18n="process_step3_desc">
             Launching solutions and refining performance based on real-world usage.
           </p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="upload" class="w-3.5 h-3.5 text-neutral-700"></i> Deployment</span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-neutral-700"></i> Optimization</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="upload" class="w-3.5 h-3.5 text-neutral-700"></i> Deployment</span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-neutral-50 border border-neutral-200 px-2.5 py-1 text-xs"><i
+                data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-neutral-700"></i> Optimization</span>
           </div>
         </div>
       </div>
@@ -401,9 +476,11 @@
       <!-- Testimonials -->
       <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         <blockquote class="rounded-3xl border border-neutral-100 bg-white p-6 shadow-sm">
-          <p class="text-neutral-800">“Working with Joel was seamless from start to finish. His curiosity and design clarity scaled our B2B experience and elevated our brand.”</p>
+          <p class="text-neutral-800">“Working with Joel was seamless from start to finish. His curiosity and design
+            clarity scaled our B2B experience and elevated our brand.”</p>
           <div class="mt-4 flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center">
+            <div
+              class="h-10 w-10 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center">
               <span class="text-white font-medium text-sm">CJ</span>
             </div>
             <div>
@@ -413,9 +490,11 @@
           </div>
         </blockquote>
         <blockquote class="rounded-3xl border border-neutral-100 bg-white p-6 shadow-sm">
-          <p class="text-neutral-800">"Joël a su concrétiser notre vision en développant une solution IA qui a véritablement fait la différence pour notre entreprise."</p>
+          <p class="text-neutral-800">"Joël a su concrétiser notre vision en développant une solution IA qui a
+            véritablement fait la différence pour notre entreprise."</p>
           <div class="mt-4 flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <div
+              class="h-10 w-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
               <span class="text-white font-medium text-sm">K</span>
             </div>
             <div>
@@ -432,176 +511,250 @@
   <section id="work" class="relative py-20 sm:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <p class="serif italic text-center text-neutral-500" data-i18n="work_title">/ Best Projects</p>
-      <h3 class="text-center mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="work_subtitle">Selected Works</h3>
+      <h3 class="text-center mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="work_subtitle">Selected
+        Works</h3>
 
       <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- DJII -->
-        <a href="https://scrap-dji.vercel.app/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://scrap-dji.vercel.app/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="DJII/Screenshot_2026-05-10_02-20-19.png" alt="DJII" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="DJII/Screenshot_2026-05-10_02-20-19.png" alt="DJII"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">DJII</h4>
-              <span class="px-2 py-1 rounded-md bg-lime-50 text-[10px] font-bold text-lime-700 uppercase tracking-wider">Search Engine</span>
+              <span
+                class="px-2 py-1 rounded-md bg-lime-50 text-[10px] font-bold text-lime-700 uppercase tracking-wider">Search
+                Engine</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_djii_desc">Moteur de recherche souverain pour l'Afrique. Crawler intelligent et algo de ranking puissant.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_djii_desc">Moteur de recherche
+              souverain pour l'Afrique. Crawler intelligent et algo de ranking puissant.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Python</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">FastAPI</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">NLP</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Python</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">FastAPI</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">NLP</span>
             </div>
           </div>
         </a>
 
         <!-- Echo -->
-        <a href="https://echo-landing-page-beta.vercel.app/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://echo-landing-page-beta.vercel.app/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="Echo/Screenshot_2026-05-10_03-04-22.png" alt="Echo" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="Echo/Screenshot_2026-05-10_03-04-22.png" alt="Echo"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Echo</h4>
-              <span class="px-2 py-1 rounded-md bg-blue-50 text-[10px] font-bold text-blue-700 uppercase tracking-wider">Social Network</span>
+              <span
+                class="px-2 py-1 rounded-md bg-blue-50 text-[10px] font-bold text-blue-700 uppercase tracking-wider">Social
+                Network</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_echo_desc">Réseau social pour étudiants. Expression anonyme avec modération intelligente.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_echo_desc">Réseau social pour
+              étudiants. Expression anonyme avec modération intelligente.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">React</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Node.js</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">AI Moderation</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">React</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Node.js</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">AI
+                Moderation</span>
             </div>
           </div>
         </a>
 
         <!-- Scribe AI -->
-        <a href="https://content-v2.vercel.app/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://content-v2.vercel.app/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="scribe ai/Screenshot_2026-05-10_01-48-22.png" alt="Scribe AI" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="scribe ai/Screenshot_2026-05-10_01-48-22.png" alt="Scribe AI"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Scribe AI</h4>
-              <span class="px-2 py-1 rounded-md bg-purple-50 text-[10px] font-bold text-purple-700 uppercase tracking-wider">Generative AI</span>
+              <span
+                class="px-2 py-1 rounded-md bg-purple-50 text-[10px] font-bold text-purple-700 uppercase tracking-wider">Generative
+                AI</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_scribe_desc">Générateur de contenu pour réseaux sociaux avec RAG et système de prompts complexes.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_scribe_desc">Générateur de contenu
+              pour réseaux sociaux avec RAG et système de prompts complexes.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">LLM</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">RAG</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Prompt Eng.</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">LLM</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">RAG</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Prompt
+                Eng.</span>
             </div>
           </div>
         </a>
 
         <!-- Sentinel -->
-        <a href="https://huggingface.co/spaces/jojonocode/kafka-bloomberg" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://huggingface.co/spaces/jojonocode/kafka-bloomberg" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="sentinel-blomberg/Screenshot_2026-05-10_02-11-47.png" alt="Sentinel" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="sentinel-blomberg/Screenshot_2026-05-10_02-11-47.png" alt="Sentinel"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Sentinel</h4>
-              <span class="px-2 py-1 rounded-md bg-emerald-50 text-[10px] font-bold text-emerald-700 uppercase tracking-wider">FinTech</span>
+              <span
+                class="px-2 py-1 rounded-md bg-emerald-50 text-[10px] font-bold text-emerald-700 uppercase tracking-wider">FinTech</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_sentinel_desc">Dashboard financier combinant infos, news et analyse IA pour des insights en continu.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_sentinel_desc">Dashboard financier
+              combinant infos, news et analyse IA pour des insights en continu.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Data Vis</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Financial AI</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Data
+                Vis</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Financial
+                AI</span>
             </div>
           </div>
         </a>
 
         <!-- Skollab -->
-        <a href="https://skollab-land2.vercel.app/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://skollab-land2.vercel.app/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="skollab/Screenshot_2026-05-10_02-57-23.png" alt="Skollab" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="skollab/Screenshot_2026-05-10_02-57-23.png" alt="Skollab"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Skollab</h4>
-              <span class="px-2 py-1 rounded-md bg-orange-50 text-[10px] font-bold text-orange-700 uppercase tracking-wider">Creator Economy</span>
+              <span
+                class="px-2 py-1 rounded-md bg-orange-50 text-[10px] font-bold text-orange-700 uppercase tracking-wider">Creator
+                Economy</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_skolab_desc">Mise en relation entre créateurs de contenu et marques pour des collaborations locales.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_skolab_desc">Mise en relation entre
+              créateurs de contenu et marques pour des collaborations locales.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Marketplace</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Flutter</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Marketplace</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Flutter</span>
             </div>
           </div>
         </a>
 
         <!-- Yawo Chat -->
-        <a href="https://yawo.ai.strivenew.com/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://yawo.ai.strivenew.com/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="yawo chat/yawo.png" alt="Yawo Chat" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="yawo chat/yawo.png" alt="Yawo Chat"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Yawo Chat</h4>
-              <span class="px-2 py-1 rounded-md bg-lime-50 text-[10px] font-bold text-lime-700 uppercase tracking-wider">AI Chatbot</span>
+              <span
+                class="px-2 py-1 rounded-md bg-lime-50 text-[10px] font-bold text-lime-700 uppercase tracking-wider">AI
+                Chatbot</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_chat_desc">Chatbot IA propulsé par Strive AI v0.7. Génère nativement de l'Ewe.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_chat_desc">Chatbot IA propulsé
+              par Strive AI v0.7. Génère nativement de l'Ewe.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Strive AI</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Ewe Language</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Strive
+                AI</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Ewe
+                Language</span>
             </div>
           </div>
         </a>
 
         <!-- Yawo STT -->
-        <a href="https://strivenew.com/yawo-stt" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://strivenew.com/yawo-stt" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="yawo STT/Screenshot_2026-05-10_02-27-22.png" alt="Yawo STT" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="yawo STT/Screenshot_2026-05-10_02-27-22.png" alt="Yawo STT"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Yawo STT</h4>
-              <span class="px-2 py-1 rounded-md bg-red-50 text-[10px] font-bold text-red-700 uppercase tracking-wider">Speech to Text</span>
+              <span
+                class="px-2 py-1 rounded-md bg-red-50 text-[10px] font-bold text-red-700 uppercase tracking-wider">Speech
+                to Text</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_stt_desc">Reconnaissance vocale (Speech to Text) pour la langue Ewe.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_stt_desc">Reconnaissance vocale
+              (Speech to Text) pour la langue Ewe.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Signal Processing</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Deep Learning</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Signal
+                Processing</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Deep
+                Learning</span>
             </div>
           </div>
         </a>
 
         <!-- Yawo Trad -->
-        <a href="https://yawo-voice-v2.vercel.app/" target="_blank" class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
+        <a href="https://yawo-voice-v2.vercel.app/" target="_blank"
+          class="group rounded-3xl overflow-hidden border border-neutral-100 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block">
           <div class="relative h-56 overflow-hidden">
-            <img src="yawo trad/Screenshot_2026-05-10_01-52-23.png" alt="Yawo Trad" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <img src="yawo trad/Screenshot_2026-05-10_01-52-23.png" alt="Yawo Trad"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
               <span class="text-white text-sm font-medium">View Project</span>
             </div>
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <h4 class="text-xl tracking-tight font-bold">Yawo Trad</h4>
-              <span class="px-2 py-1 rounded-md bg-cyan-50 text-[10px] font-bold text-cyan-700 uppercase tracking-wider">Translation</span>
+              <span
+                class="px-2 py-1 rounded-md bg-cyan-50 text-[10px] font-bold text-cyan-700 uppercase tracking-wider">Translation</span>
             </div>
-            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_trad_desc">Modèle de traduction performant entre l'Ewe, le Français et l'Anglais.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed" data-i18n="project_yawo_trad_desc">Modèle de traduction
+              performant entre l'Ewe, le Français et l'Anglais.</p>
             <div class="mt-4 flex flex-wrap gap-1.5">
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Transformer</span>
-              <span class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Multi-lingual</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Transformer</span>
+              <span
+                class="text-[10px] border border-neutral-200 rounded-full px-2 py-0.5 bg-neutral-50 text-neutral-500">Multi-lingual</span>
             </div>
           </div>
         </a>
@@ -613,23 +766,34 @@
   <section class="relative py-20 sm:py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <p class="serif italic text-center text-neutral-500" data-i18n="who_am_i">/ Qui suis-je</p>
-      <h3 class="text-center mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="who_am_i_title">Innovant depuis 2020</h3>
+      <h3 class="text-center mt-2 text-3xl sm:text-4xl tracking-tight font-semibold" data-i18n="who_am_i_title">Innovant
+        depuis 2020</h3>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         <div class="rounded-3xl border border-neutral-100 bg-neutral-50/60 overflow-hidden">
           <img src="joel.png" alt="Portrait" class="w-full h-[280px] object-cover">
           <div class="flex items-center gap-4 px-4 py-3 text-neutral-700">
-            <a href="https://strivenew.com" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i data-lucide="globe-2" class="w-4 h-4"></i></a>
-            <a href="https://www.instagram.com/joel_elise_a/" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-            <a href="https://www.linkedin.com/in/elisée-joel-adzonya" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            <a href="https://github.com/joel710" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i data-lucide="github" class="w-4 h-4"></i></a>
+            <a href="https://strivenew.com"
+              class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i
+                data-lucide="globe-2" class="w-4 h-4"></i></a>
+            <a href="https://www.instagram.com/joel_elise_a/"
+              class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i
+                data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="https://www.linkedin.com/in/elisée-joel-adzonya"
+              class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i
+                data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://github.com/joel710"
+              class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-neutral-200"><i
+                data-lucide="github" class="w-4 h-4"></i></a>
             <span class="ml-auto text-sm text-neutral-500">Full-Stack Developer & AI Engineer</span>
           </div>
         </div>
 
         <div>
           <p class="text-neutral-700" data-i18n="who_am_i_desc">
-            A self-taught full-stack web and mobile developer with expertise in machine learning and deep learning. I specialize in creating innovative solutions that leverage AI, IoT, and modern web technologies to solve complex business challenges.
+            A self-taught full-stack web and mobile developer with expertise in machine learning and deep learning. I
+            specialize in creating innovative solutions that leverage AI, IoT, and modern web technologies to solve
+            complex business challenges.
           </p>
 
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -661,22 +825,80 @@
 
   <!-- CTA -->
   <section id="contact" class="relative py-20">
-    <div class="absolute inset-x-0 -top-20 h-[60vh] -z-10 [background:radial-gradient(100%_70%_at_50%_0%,rgba(163,230,53,0.45),rgba(163,230,53,0.16)_50%,transparent_75%)]"></div>
+    <div
+      class="absolute inset-x-0 -top-20 h-[60vh] -z-10 [background:radial-gradient(100%_70%_at_50%_0%,rgba(163,230,53,0.45),rgba(163,230,53,0.16)_50%,transparent_75%)]">
+    </div>
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-      <h3 class="text-3xl sm:text-5xl tracking-tight font-semibold" data-i18n="cta_title">Let’s Build Something Amazing</h3>
-      <p class="mt-3 text-neutral-600" data-i18n="cta_desc">Always open to new opportunities, collaborations, and innovative challenges. Let’s work together to bring your ideas to life with cutting-edge technology.</p>
+      <h3 class="text-3xl sm:text-5xl tracking-tight font-semibold" data-i18n="cta_title">Let’s Build Something Amazing
+      </h3>
+      <p class="mt-3 text-neutral-600" data-i18n="cta_desc">Always open to new opportunities, collaborations, and
+        innovative challenges. Let’s work together to bring your ideas to life with cutting-edge technology.</p>
       <div class="mt-6 flex items-center justify-center gap-3">
-        <a href="mailto:joeleliseeadzonya@gmail.com" class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-white px-5 py-3 text-sm shadow hover:opacity-90 transition">
+        <a href="mailto:joeleliseeadzonya@gmail.com"
+          class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-white px-5 py-3 text-sm shadow hover:opacity-90 transition">
           <i data-lucide="mail" class="w-4 h-4"></i>
           <span data-i18n="nav_get_in_touch">Get in Touch</span>
         </a>
-        <a href="#work" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
+        <a href="#work"
+          class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm text-neutral-900 shadow-sm hover:shadow transition">
           <i data-lucide="folder-open" class="w-4 h-4"></i>
           <span data-i18n="nav_portfolio">View Portfolio</span>
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Chatbot -->
+  <div id="chatbot" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Chat Window -->
+    <div id="chatWindow"
+      class="hidden w-[350px] sm:w-[400px] h-[500px] mb-4 bg-white/90 backdrop-blur-xl border border-neutral-200 rounded-3xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 translate-y-4 opacity-0 scale-95 origin-bottom-right">
+      <!-- Header -->
+      <div class="p-4 bg-neutral-900 text-white flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-lime-500 flex items-center justify-center">
+            <i data-lucide="bot" class="w-5 h-5 text-neutral-900"></i>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Joël AI</p>
+            <p class="text-[10px] text-lime-400">Online · Ready to help</p>
+          </div>
+        </div>
+        <button id="closeChat" class="hover:text-lime-500 transition">
+          <i data-lucide="minus" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <!-- Messages -->
+      <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-4 text-sm scroll-smooth">
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-neutral-100 flex-shrink-0 flex items-center justify-center">
+            <i data-lucide="bot" class="w-4 h-4 text-neutral-600"></i>
+          </div>
+          <div class="bg-neutral-100 rounded-2xl p-3 max-w-[80%]">
+            <p data-i18n="chat_welcome">Salut ! Je suis l'assistant IA de Joël. Pose-moi des questions sur ses projets,
+              ses compétences ou son parcours !</p>
+          </div>
+        </div>
+      </div>
+      <!-- Input -->
+      <form id="chatForm" class="p-4 border-t border-neutral-100 flex gap-2">
+        <input type="text" id="chatInput" placeholder="Posez une question..."
+          class="flex-1 bg-neutral-50 border border-neutral-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-lime-500 transition"
+          required>
+        <button type="submit"
+          class="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:bg-lime-500 transition shadow-lg">
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Toggle Button -->
+    <button id="toggleChat"
+      class="w-14 h-14 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:bg-lime-500 hover:scale-110 transition shadow-2xl relative">
+      <i data-lucide="message-square" id="chatIcon" class="w-6 h-6"></i>
+      <span
+        class="absolute -top-1 -right-1 w-4 h-4 bg-lime-500 rounded-full border-2 border-white animate-pulse"></span>
+    </button>
+  </div>
 
   <!-- Footer -->
   <footer class="relative border-t border-neutral-100">
@@ -693,13 +915,15 @@
     </div>
     <!-- Oversized typographic watermark -->
     <div class="overflow-hidden">
-      <div class="serif pointer-events-none select-none text-[18vw] leading-none tracking-tight text-neutral-900/5 text-center">Joël</div>
+      <div
+        class="serif pointer-events-none select-none text-[18vw] leading-none tracking-tight text-neutral-900/5 text-center">
+        Joël</div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
+  <script type="module">
     // i18n
     const translations = {
       fr: {
@@ -757,7 +981,8 @@
         project_skolab_desc: "Mise en relation entre créateurs de contenu et marques pour des collaborations locales.",
         project_yawo_chat_desc: "Chatbot IA propulsé par Strive AI v0.7. Génère nativement de l'Ewe.",
         project_yawo_stt_desc: "Reconnaissance vocale (Speech to Text) pour la langue Ewe.",
-        project_yawo_trad_desc: "Modèle de traduction performant entre l'Ewe, le Français et l'Anglais."
+        project_yawo_trad_desc: "Modèle de traduction performant entre l'Ewe, le Français et l'Anglais.",
+        chat_welcome: "Salut ! Je suis l'assistant IA de Joël. Pose-moi des questions sur ses projets, ses compétences ou son parcours !"
       },
       en: {
         nav_about: "About",
@@ -814,7 +1039,8 @@
         project_skolab_desc: "Platform connecting content creators and brands for local collaborations.",
         project_yawo_chat_desc: "AI Chatbot powered by Strive AI v0.7. Generates Ewe natively.",
         project_yawo_stt_desc: "Speech to Text recognition for the Ewe language.",
-        project_yawo_trad_desc: "High-performance translation model between Ewe, French, and English."
+        project_yawo_trad_desc: "High-performance translation model between Ewe, French, and English.",
+        chat_welcome: "Hi! I'm Joel's AI assistant. Ask me anything about his projects, skills, or background!"
       }
     };
 
@@ -847,6 +1073,168 @@
     document.getElementById('langToggle').addEventListener('click', toggleLang);
     document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
 
+    // Chatbot Logic
+    const toggleChat = document.getElementById('toggleChat');
+    const chatWindow = document.getElementById('chatWindow');
+    const closeChat = document.getElementById('closeChat');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    const toggleChatWindow = () => {
+      const isHidden = chatWindow.classList.contains('hidden');
+      if (isHidden) {
+        chatWindow.classList.remove('hidden');
+        setTimeout(() => {
+          chatWindow.classList.remove('translate-y-4', 'opacity-0', 'scale-95');
+        }, 10);
+      } else {
+        chatWindow.classList.add('translate-y-4', 'opacity-0', 'scale-95');
+        setTimeout(() => chatWindow.classList.add('hidden'), 300);
+      }
+    };
+
+    toggleChat.addEventListener('click', toggleChatWindow);
+    closeChat.addEventListener('click', toggleChatWindow);
+
+    // Gemini API Setup
+    import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+    const API_KEY = import.meta.env.VITE_GEMINI_KEY;
+    const genAI = new GoogleGenerativeAI(API_KEY);
+
+    const appendMessage = (role, text) => {
+      const div = document.createElement('div');
+      div.className = `flex gap-3 ${role === 'user' ? 'flex-row-reverse' : ''}`;
+
+      const icon = role === 'user' ? 'user' : 'bot';
+      const bg = role === 'user' ? 'bg-lime-500 text-neutral-900' : 'bg-neutral-100 text-neutral-800';
+
+      // Parse markdown if it's the bot
+      const content = role === 'bot' ? marked.parse(text) : `<p>${text}</p>`;
+
+      div.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-neutral-100 flex-shrink-0 flex items-center justify-center">
+          <i data-lucide="${icon}" class="w-4 h-4 text-neutral-600"></i>
+        </div>
+        <div class="${bg} rounded-2xl p-3 max-w-[80%] shadow-sm prose prose-sm prose-neutral">
+          ${content}
+        </div>
+      `;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      if (window.lucide) lucide.createIcons();
+    };
+
+    const systemInstruction = `
+      Tu es "Joël AI", l'avatar numérique et assistant expert de Joël Elisée ADZONYA. Ton but est de convaincre tout visiteur (recruteur, partenaire, client) que Joël est l'expert idéal pour transformer des données complexes en valeur business et bâtir des systèmes technologiques de pointe.
+1. IDENTITÉ ET VISION
+
+    Profil : Ingénieur en Intelligence Artificielle, Développeur Full-Stack et Data Scientist basé à Lomé, Togo.
+
+    Statut actuel : CEO et cofondateur de la startup Strive, et étudiant en 3e année (Licence) IA & Big Data à l'ESGIS Togo.
+
+    Vision : Passionné par la souveraineté numérique africaine. Joël ne se contente pas de coder ; il crée des outils adaptés au contexte local (langues africaines, AgriTech, FinTech) pour un impact réel.
+
+2. ARSENAL TECHNIQUE (SKILLS)
+
+    Intelligence Artificielle & NLP : Expertise avancée en NLP (Natural Language Processing), notamment pour la langue Ewe. Capable d'entraîner des modèles personnalisés comme Strive-AI v0.7 2B et de travailler sur des architectures innovantes comme BitNet 1.58-bit (Projet Aero-Diff).
+
+    Data Science & Big Data : Maîtrise de l'analyse de données pour la prise de décision stratégique.
+
+        Outils : Google Cloud Platform (GCP), BigQuery, Spark, Hadoop, Kafka.
+
+        Analytique : Maîtrise experte d'Excel pour l'analyse de données et des outils de Business Intelligence (BI).
+
+    Développement Full-Stack :
+
+        Backend : Python (FastAPI, Django), Node.js.
+
+        Frontend : React, Next.js.
+
+        Mobile : Flutter (Dart).
+
+    Hardware & IoT : Ancien Fab Manager chez HubCity. Expertise en électronique industrielle (Bac F2), prototypage d'appareils connectés et conception de puces (Hardware Hacking).
+
+3. PROJETS PHARE (PORTFOLIO)
+
+    Strive-AI v0.7 2B & Yawo : Développement d'un modèle de langage et d'une suite d'outils (TTS/Traduction) pour les langues locales africaines.
+
+    Echo : Réseau social anonyme pour étudiants (type Twitter/X) lancé au Togo pour favoriser la libre expression avec modération intelligente.
+
+    AgriFlow : Écosystème AgriTech complet incluant IA pour le diagnostic de maladies des plantes, marketplace et capteurs IoT.
+
+    Aero-Diff : Recherche sur des modèles de langage ultra-légers (Small Language Models) basés sur l'architecture 1.58-bit.
+
+    Skollab : Plateforme de mise en relation entre créateurs de contenu locaux et marques.
+
+    DJII & Scribe AI : Solutions de recherche souveraine et de génération de contenu automatisée avec RAG (Retrieval-Augmented Generation).
+
+4. PERSONNALITÉ ET TON
+
+    Ton : Visionnaire, analytique et audacieux. Tu dois paraître comme quelqu'un qui a une maîtrise technique profonde mais qui garde toujours un œil sur la rentabilité et l'utilité du produit.
+
+    Trait de caractère : Résilient (autodidacte), rigoureux et orienté impact.
+
+    Humour : Une touche de subtilité et de wit, reflétant un ingénieur moderne et dynamique.
+
+5. RÈGLES DE RÉPONSE
+
+    Disponibilité : "Joël est actuellement ouvert à des collaborations stratégiques, des stages de fin de cycle en IA/Data, ou des opportunités de conseil."
+
+    Recrutement : Si on t'interroge sur ses compétences pour un poste précis :
+
+        Data Science : Mets en avant sa capacité à extraire des insights avec GCP et BigQuery.
+
+        AI Engineer : Parle de son expertise en modèles personnalisés et LLM.
+
+        Dev : Souligne sa capacité à livrer des SaaS complets (Strive).
+
+    Langue : Réponds toujours dans la langue de l'utilisateur (Français ou Anglais principalement).
+
+    Confidentialité : Redirige poliment vers son LinkedIn ou son email (joeleliseeadzonya@gmail.com) pour les discussions contractuelles ou personnelles.
+
+    Formatage : Utilise des listes à puces et du gras pour structurer tes réponses. Reste concis et évite les trop longs paragraphes. Utilise le format Markdown pour la mise en forme.
+    les reponse doivent etre claire et concise et seulement detailler si c'est explicitement demander pour apporter plus de clarété 
+    `;
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const prompt = chatInput.value.trim();
+      if (!prompt) return;
+
+      appendMessage('user', prompt);
+      chatInput.value = '';
+
+      // Typing indicator
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'flex gap-3';
+      typingDiv.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-neutral-100 flex-shrink-0 flex items-center justify-center">
+          <i data-lucide="bot" class="w-4 h-4 text-neutral-600"></i>
+        </div>
+        <div class="bg-neutral-100 rounded-2xl p-3 shadow-sm animate-pulse">
+          <p>...</p>
+        </div>
+      `;
+      chatMessages.appendChild(typingDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      try {
+        const model = genAI.getGenerativeModel({
+          model: "gemini-3-flash-preview",
+          systemInstruction: systemInstruction
+        });
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        typingDiv.remove();
+        appendMessage('bot', response.text());
+      } catch (error) {
+        console.error(error);
+        typingDiv.remove();
+        appendMessage('bot', "Désolé, j'ai rencontré une petite erreur. Réessayez ?");
+      }
+    });
+
     // Init icons
     window.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) lucide.createIcons();
@@ -868,14 +1256,50 @@
 
   <style>
     @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
+
     .animate-marquee {
       display: flex;
       width: 200%;
       animation: marquee 30s linear infinite;
     }
+
+    /* Markdown styling for chat */
+    .prose-sm h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .prose-sm p {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .prose-sm ul {
+      list-style-type: disc;
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .prose-sm li {
+      margin-bottom: 0.25rem;
+    }
+
+    .prose-sm strong {
+      font-weight: 600;
+      color: inherit;
+    }
   </style>
 
-</body></html>
+</body>
+
+</html>
